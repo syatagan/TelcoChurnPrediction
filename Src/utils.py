@@ -52,8 +52,6 @@ def target_summary_with_cat(xdf, xtarget,xcat_col):
                         "RATIO ": 100 * xdf.groupby(xcat_col)[xtarget].count() / len(xdf)}))
 
 def target_summary_with_num(xdf, xtarget,xnum_col):
-    ## SORU print(xdf.groupby(xtarget)[xnum_col].agg({xnum_col : "mean"}))
-    ## NUMERICAL COL DEĞERİNİ YAZDIRAMADIM
     print(xdf.groupby(xtarget)[xnum_col].agg("mean"))
 
 def grab_col_names(xdf,xcat_th = 10 , xcar_th = 20):
